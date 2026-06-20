@@ -1,0 +1,131 @@
+.experience-counter {
+  background: linear-gradient(135deg, #FFF7ED, #FFFBEB);
+  border: 1px solid rgba(249, 115, 22, 0.15);
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.06);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.experience-counter:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.1);
+}
+
+.counter-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.counter-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1A1A2E;
+  margin: 0;
+}
+
+.counter-icon {
+  font-size: 1.5rem;
+}
+
+.counter-subtitle {
+  color: #64748B;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.counter-item {
+  background: #FFFBEB;
+  padding: 12px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(249, 115, 22, 0.08);
+}
+
+.counter-number {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #F97316, #FB923C);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.counter-label {
+  font-size: 0.65rem;
+  color: #64748B;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.counter-total {
+  padding-top: 15px;
+  border-top: 1px solid rgba(249, 115, 22, 0.1);
+  color: #64748B;
+  font-size: 0.95rem;
+}
+
+.counter-total span {
+  font-weight: 700;
+  background: linear-gradient(135deg, #F97316, #FB923C);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-counter {
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  .counter-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .counter-number {
+    font-size: 1.6rem;
+  }
+  
+  .counter-item {
+    padding: 10px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .counter-number {
+    font-size: 1.3rem;
+  }
+  
+  .counter-label {
+    font-size: 0.55rem;
+  }
+  
+  .counter-header h3 {
+    font-size: 1.1rem;
+  }
+}

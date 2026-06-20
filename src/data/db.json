@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Microservices",
+      "description": "Built scalable e-commerce backend with Spring Boot microservices architecture",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Docker"],
+      "github": "https://github.com/yourusername/project1",
+      "demo": "https://project1-demo.com"
+    },
+    {
+      "id": 2,
+      "title": "Employee Management System",
+      "description": "REST API for employee management with Spring Data JPA and PostgreSQL",
+      "tech": ["Spring Boot", "JPA", "PostgreSQL", "REST API"],
+      "github": "https://github.com/yourusername/project2",
+      "demo": "https://project2-demo.com"
+    },
+    {
+      "id": 3,
+      "title": "Cloud Monitoring Dashboard",
+      "description": "AWS cloud monitoring dashboard with Docker deployment",
+      "tech": ["AWS", "Docker", "Java", "CloudWatch"],
+      "github": "https://github.com/yourusername/project3",
+      "demo": "https://project3-demo.com"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+.experience {
+  background: #FFFBEB;
+}
+
+.experience-counter-wrapper {
+  margin-bottom: 30px;
+}
+.experience-card {
+  background: #FFF7ED;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+  border: 1px solid rgba(249, 115, 22, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.08);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+.experience-header h3 {
+  font-size: 1.4rem;
+  color: #1A1A2E;
+  font-weight: 700;
+}
+
+.company {
+  font-weight: 600;
+  color: #F97316;
+  margin-top: 5px;
+}
+
+.project {
+  color: #64748B;
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+.date {
+  padding: 6px 16px;
+  background: rgba(249, 115, 22, 0.1);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #F97316;
+  white-space: nowrap;
+}
+
+.location {
+  color: #64748B;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.experience-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-details li {
+  color: #64748B;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.experience-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #F97316;
+  font-weight: bold;
+}
+
+.company-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+  }
+  
+  .experience-card {
+    padding: 20px;
+  }
+}
