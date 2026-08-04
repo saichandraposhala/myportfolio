@@ -60,7 +60,7 @@ const Hero = () => {
           </div>
 
           <p className="hero-description">
-            B.Tech Computer Science graduate with 20 months of experience designing
+            B.Tech Computer Science graduate with 2 years of experience designing
             scalable Java applications, REST APIs, and cloud-native solutions.
           </p>
 
