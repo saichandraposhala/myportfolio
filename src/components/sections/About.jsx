@@ -8,7 +8,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              B.Tech Computer Science graduate and backend developer with 20 months 
+              B.Tech Computer Science graduate and backend developer with 2 years 
               of experience designing scalable Java applications, REST APIs, and 
               database integrations. Adept at building robust internal services and 
               integrating complex enterprise systems to streamline data workflows.
