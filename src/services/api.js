@@ -1,4 +1,5 @@
 import axios from 'axios'
+import projectData from '../data/db.json'
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
@@ -11,32 +12,6 @@ export const fetchProjects = async () => {
     return response.data
   } catch (error) {
     console.error('Error fetching projects:', error)
-    // Fallback data
-    return [
-      {
-        id: 1,
-        title: 'E-Commerce Microservices',
-        description: 'Built scalable e-commerce backend with Spring Boot microservices architecture',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
-        github: 'https://github.com',
-        demo: 'https://demo.com'
-      },
-      {
-        id: 2,
-        title: 'Employee Management System',
-        description: 'REST API for employee management with Spring Data JPA and PostgreSQL',
-        tech: ['Spring Boot', 'JPA', 'PostgreSQL', 'REST API'],
-        github: 'https://github.com',
-        demo: 'https://demo.com'
-      },
-      {
-        id: 3,
-        title: 'Cloud Monitoring Dashboard',
-        description: 'AWS cloud monitoring dashboard with Docker deployment',
-        tech: ['AWS', 'Docker', 'Java', 'CloudWatch'],
-        github: 'https://github.com',
-        demo: 'https://demo.com'
-      }
-    ]
+    return projectData.projects
   }
 }

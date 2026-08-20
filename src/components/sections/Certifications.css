@@ -1,5 +1,5 @@
 .certifications {
-  background: #FFFBEB;
+  background: #FAFBFC;
   padding: 60px 0;
 }
 
@@ -10,10 +10,10 @@
 }
 
 .cert-card {
-  background: #FFF7ED;
+  background: #F1F3F5;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid rgba(249, 115, 22, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.1);
   display: flex;
   align-items: center;
   gap: 20px;
@@ -22,12 +22,12 @@
 
 .cert-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.08);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.08);
 }
 
 .cert-icon {
   font-size: 2.5rem;
-  background: rgba(249, 115, 22, 0.08);
+  background: rgba(37, 99, 235, 0.08);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -38,21 +38,33 @@
 }
 
 .cert-content h3 {
-  color: #1A1A2E;
+  color: #20242B;
   font-size: 1.1rem;
   margin-bottom: 4px;
 }
 
 .cert-issuer {
-  color: #F97316;
+  color: #2563EB;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .cert-date {
-  color: #64748B;
+  color: #5B6472;
   font-size: 0.85rem;
   margin-top: 4px;
+}
+
+.cert-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2563EB;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cert-link:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaUserCircle } from 'react-icons/fa'
 import './Hero.css'
 
 const Hero = () => {
@@ -28,27 +28,13 @@ const Hero = () => {
     return () => clearTimeout(timeout)
   }, [displayText, isDeleting, currentTitleIndex])
 
-  // Skill data with positions
-  const skills = [
-    { name: 'Java', icon: '☕', angle: 0 },
-    { name: 'Spring Boot', icon: '🚀', angle: 36 },
-    { name: 'AWS', icon: '☁️', angle: 72 },
-    { name: 'Docker', icon: '🐳', angle: 108 },
-    { name: 'PostgreSQL', icon: '🐘', angle: 144 },
-    { name: 'REST APIs', icon: '📊', angle: 180 },
-    { name: 'Microservices', icon: '🔧', angle: 216 },
-    { name: 'Spring Data JPA', icon: '📦', angle: 252 },
-    { name: 'Jenkins', icon: '🔄', angle: 288 },
-    { name: 'New Relic', icon: '📈', angle: 324 }
-  ]
-
   return (
-    <section id="about" className="hero">
+    <section className="hero">
       <div className="container hero-content">
         <div className="hero-text">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Available for opportunities
+            Open to backend roles
           </div>
 
           <h1 className="hero-name">Saichandra Poshala</h1>
@@ -74,76 +60,22 @@ const Hero = () => {
           </div>
 
           <div className="hero-social">
-            <a href="https://github.com/saichandraposhala" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/saichandraposhala" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/saichandraposhala" target="_blank" rel="noopener noreferrer">
+            <a href="https://linkedin.com/in/saichandraposhala" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <FaLinkedin />
             </a>
-            <a href="mailto:saichandraposhala@gmail.com">
+            <a href="mailto:saichandraposhala@gmail.com" aria-label="Send an email">
               <FaEnvelope />
             </a>
           </div>
         </div>
 
-        <div className="hero-visual">
-          {/* SVG for connecting lines */}
-          <svg className="connection-lines" viewBox="-200 -200 400 400">
-            {skills.map((skill, index) => {
-              const angle = (skill.angle - 90) * (Math.PI / 180)
-              const radius = 160
-              const x = Math.cos(angle) * radius
-              const y = Math.sin(angle) * radius
-              return (
-                <line
-                  key={index}
-                  x1="0"
-                  y1="0"
-                  x2={x}
-                  y2={y}
-                  className="skill-line"
-                  stroke="rgba(249, 115, 22, 0.15)"
-                  strokeWidth="1.5"
-                  strokeDasharray="4 4"
-                />
-              )
-            })}
-          </svg>
-
-          {/* Central Sphere */}
-          <div className="profile-ring">
-            <div className="profile-placeholder">
-              <span className="center-text">Skills✦</span>
-            </div>
-          </div>
-
-          {/* Skill Badges */}
-          {skills.map((skill, index) => {
-            const angle = (skill.angle - 90) * (Math.PI / 180)
-            const radius = 180
-            const x = Math.cos(angle) * radius
-            const y = Math.sin(angle) * radius
-            
-            return (
-              <div
-                key={index}
-                className="floating-badge"
-                style={{
-                  left: `calc(50% + ${x}px - 60px)`,
-                  top: `calc(50% + ${y}px - 18px)`,
-                  animationDelay: `${index * 0.3}s`
-                }}
-              >
-                <span className="badge-icon">{skill.icon}</span>
-                <span className="badge-name">{skill.name}</span>
-              </div>
-            )
-          })}
+        <div className="hero-profile" aria-label="Profile photo placeholder">
+          <FaUserCircle />
+          <span>Profile photo coming soon</span>
         </div>
-      </div>
-
-      <div className="scroll-indicator">
-        <FaArrowDown />
       </div>
     </section>
   )

@@ -1,5 +1,5 @@
 .skills {
-  background: #FFF7ED;
+  background: #F1F3F5;
 }
 
 .skills-grid {
@@ -9,10 +9,10 @@
 }
 
 .skill-category {
-  background: #FFFBEB;
+  background: #FAFBFC;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.08);
   transition: transform 0.3s ease;
 }
 
@@ -22,7 +22,7 @@
 
 .category-title {
   font-size: 1.1rem;
-  color: #1A1A2E;
+  color: #20242B;
   margin-bottom: 15px;
   font-weight: 600;
 }
@@ -35,17 +35,17 @@
 
 .skill-tag {
   padding: 6px 14px;
-  background: rgba(249, 115, 22, 0.08);
-  border: 1px solid rgba(249, 115, 22, 0.1);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.1);
   border-radius: 50px;
   font-size: 0.85rem;
-  color: #1A1A2E;
+  color: #20242B;
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: rgba(249, 115, 22, 0.15);
-  border-color: #F97316;
+  background: rgba(37, 99, 235, 0.15);
+  border-color: #2563EB;
   transform: translateY(-2px);
 }
 

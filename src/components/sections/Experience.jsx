@@ -1,4 +1,3 @@
-import ExperienceCounter from './ExperienceCounter'
 import './Experience.css'
 
 const Experience = () => {
@@ -6,12 +5,7 @@ const Experience = () => {
     <section id="experience" className="experience">
       <div className="container">
         <h2 className="section-title">💼 Experience</h2>
-        
-        {/* Add Counter Here */}
-        <div className="experience-counter-wrapper">
-          <ExperienceCounter />
-        </div>
-        
+
         <div className="experience-card">
           <div className="experience-header">
             <div>
@@ -25,15 +19,11 @@ const Experience = () => {
           <div className="experience-details">
             <p className="location">📍 Hyderabad, India</p>
             <ul>
-              <li>Developed RESTful APIs and microservices using Java and Spring Boot for enterprise Cloud SaaS platform</li>
-              <li>Implemented pagination and sorting with Spring Data JPA to optimize query performance</li>
-              <li>Collaborated with Angular/JavaScript frontend team to resolve integration issues</li>
-              <li>Resolved critical Docker build failures by migrating deprecated base images</li>
-              <li>Integrated New Relic monitoring scripts across microservices</li>
-              <li>Maintained CI/CD workflows using GitHub and Jenkins</li>
-              <li>Supported AWS cloud environments (ECS, EC2, S3, VPC, CloudWatch)</li>
-              <li>Wrote optimized SQL queries in PostgreSQL using DBeaver</li>
-              <li>Conducted functional testing of agentic AI systems</li>
+              <li>Developed and maintained 10 Java/Spring Boot RESTful microservices supporting 30K+ active users and 40K+ requests as part of a 4-person team.</li>
+              <li>Reduced response times from 2.5 seconds to 400 milliseconds by optimizing Spring Data JPA pagination and sorting.</li>
+              <li>Fixed Docker build failures across approximately 40 microservices by migrating deprecated base images and standardizing the solution platform-wide.</li>
+              <li>Supported AWS production environments across approximately 45–50 UI and backend services using ECS, EC2, S3, VPC, and CloudWatch.</li>
+              <li>Maintained 30+ GitHub and Jenkins CI/CD pipelines to support consistent, reliable deployments.</li>
             </ul>
           </div>
         </div>

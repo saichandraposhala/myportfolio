@@ -20,6 +20,14 @@ const Certifications = () => {
                   <span className="detail-value">May - September 2023</span>
                 </div>
               </div>
+              <a
+                className="cert-link"
+                href="/Wipro_Java_Certification.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View certificate
+              </a>
             </div>
           </div>
         </div>

@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #FFFBEB;
-  color: #1A1A2E;
+  background: #FFFDF7;
+  color: #1F2A24;
   scroll-behavior: smooth;
 }
 
@@ -18,16 +18,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF7ED;
+  background: #F7F1E3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #F97316, #FB923C);
+  background: #164A3A;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F97316;
+  background: #B08D57;
 }
 
 a {
@@ -49,10 +49,211 @@ section {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 40px;
-  background: linear-gradient(135deg, #F97316, #FB923C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
+  background: none;
   display: inline-block;
+}
+
+/* Charcoal, ivory, and burnt-orange theme */
+:root {
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #242424;
+  --text-primary: #F5F0E6;
+  --text-secondary: #B8B2A4;
+  --accent: #D9713C;
+  --accent-hover: #C4602E;
+  --border: #3A3A3A;
+  --accent-rgb: 217, 113, 60;
+}
+
+[data-theme="light"],
+body.light {
+  --bg-primary: #F5F0E6;
+  --bg-secondary: #EAE3D3;
+  --text-primary: #1A1A1A;
+  --text-secondary: #5A5548;
+  --accent: #C4602E;
+  --accent-hover: #A84F25;
+  --border: #D9D2C0;
+  --accent-rgb: 196, 96, 46;
+}
+
+body,
+.app {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.header.scrolled {
+  background: color-mix(in srgb, var(--bg-primary) 92%, transparent);
+  border-bottom-color: var(--border);
+}
+
+.logo-text,
+.section-title,
+.title-animated,
+.stat-number {
+  color: var(--accent);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: currentColor;
+}
+
+.nav-link,
+.hero-badge,
+.hero-description,
+.title-prefix,
+.hero-social a,
+.about-text p,
+.stat-label,
+.about-education p,
+.project-card p,
+.project-link,
+.project,
+.location,
+.experience-details li,
+.contact-info p,
+.contact-item p,
+.form-status,
+.cert-date,
+.footer-content p {
+  color: var(--text-secondary);
+}
+
+.nav-link:hover,
+.btn-secondary,
+.hero-name,
+.category-title,
+.skill-tag,
+.project-card h3,
+.cert-content h3,
+.contact-info h3,
+.contact-item strong,
+.about-education h4,
+.about-education strong,
+.experience-header h3 {
+  color: var(--text-primary);
+}
+
+.nav-link::after,
+.nav-cta,
+.btn-primary,
+.contact-form .btn-primary,
+.badge-dot,
+.company-logo {
+  background: var(--accent);
+}
+
+.nav-cta:hover,
+.btn-primary:hover,
+.contact-form .btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.32);
+}
+
+.hero {
+  background: radial-gradient(ellipse at 50% 0%, rgba(var(--accent-rgb), 0.12), transparent 60%);
+}
+
+.hero-badge,
+.skill-tag,
+.tech-tag,
+.date,
+.counter-total,
+.hero-social a {
+  background: rgba(var(--accent-rgb), 0.12);
+  border-color: var(--border);
+}
+
+.btn-secondary {
+  border-color: var(--border);
+}
+
+.btn-secondary:hover,
+.hero-social a:hover,
+.skill-tag:hover {
+  background: rgba(var(--accent-rgb), 0.18);
+  border-color: var(--accent);
+}
+
+.hero-social a:hover,
+.project-link,
+.cert-link,
+.company,
+.date,
+.contact-icon,
+.tech-tag,
+.cert-issuer,
+.experience-details li::before {
+  color: var(--accent);
+}
+
+.hero-profile {
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+.hero-profile svg {
+  color: var(--accent);
+}
+
+.about,
+.skills,
+.projects,
+.footer {
+  background: var(--bg-secondary);
+}
+
+.experience,
+.contact,
+.certifications {
+  background: var(--bg-primary);
+}
+
+.about-education,
+.skill-category,
+.project-card,
+.experience-card,
+.cert-card,
+.contact-form input,
+.contact-form textarea {
+  background: var(--bg-secondary);
+  border-color: var(--border);
+}
+
+.skill-category,
+.project-card,
+.experience-card,
+.cert-card {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.skill-tag:hover,
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: var(--text-primary);
+}
+
+.contact-form .btn-primary:disabled {
+  background: var(--accent);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
 
 @media (max-width: 768px) {

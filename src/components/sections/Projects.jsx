@@ -1,32 +1,12 @@
 import { useState, useEffect } from 'react'
+import { fetchProjects } from '../../services/api'
 import './Projects.css'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    // Mock project data - replace with API call later
-    const mockProjects = [
-      {
-        id: 1,
-        title: 'E-Commerce Microservices',
-        description: 'Built scalable e-commerce backend with Spring Boot microservices architecture',
-        tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker']
-      },
-      {
-        id: 2,
-        title: 'Employee Management System',
-        description: 'REST API for employee management with Spring Data JPA and PostgreSQL',
-        tech: ['Spring Boot', 'JPA', 'PostgreSQL', 'REST API']
-      },
-      {
-        id: 3,
-        title: 'Cloud Monitoring Dashboard',
-        description: 'AWS cloud monitoring dashboard with Docker deployment',
-        tech: ['AWS', 'Docker', 'Java', 'CloudWatch']
-      }
-    ]
-    setProjects(mockProjects)
+    fetchProjects().then(setProjects)
   }, [])
 
   return (
@@ -35,7 +15,10 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
         
         <div className="projects-grid">
-          {projects.map(project => (
+          {projects
+            .filter(project => project.github)
+            .slice(0, 4)
+            .map(project => (
             <div key={project.id} className="project-card">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -44,6 +27,16 @@ const Projects = () => {
                   <span key={i} className="tech-tag">{tech}</span>
                 ))}
               </div>
+              {project.github && (
+                <a
+                  className="project-link"
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </a>
+              )}
             </div>
           ))}
         </div>

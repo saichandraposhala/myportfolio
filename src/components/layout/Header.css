@@ -10,9 +10,9 @@
 }
 
 .header.scrolled {
-  background: rgba(255, 251, 235, 0.92);
+  background: rgba(255, 253, 247, 0.92);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+  border-bottom: 1px solid rgba(176, 141, 87, 0.2);
   padding: 10px 0;
   box-shadow: 0 2px 20px rgba(0,0,0,0.05);
 }
@@ -26,9 +26,7 @@
 .logo-text {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #F97316, #FB923C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
   letter-spacing: -1px;
 }
 
@@ -39,7 +37,7 @@
 }
 
 .nav-link {
-  color: #64748B;
+  color: #68736C;
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -53,12 +51,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #F97316, #FB923C);
+  background: #B08D57;
   transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #1A1A2E;
+  color: #1F2A24;
 }
 
 .nav-link:hover::after {
@@ -67,7 +65,7 @@
 
 .nav-cta {
   padding: 10px 24px;
-  background: linear-gradient(135deg, #F97316, #FB923C);
+  background: #164A3A;
   border-radius: 50px;
   color: #ffffff;
   font-weight: 600;
@@ -77,7 +75,27 @@
 
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+  box-shadow: 0 10px 30px rgba(22, 74, 58, 0.3);
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  color: var(--accent);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
 }
 
 .hamburger {
@@ -93,7 +111,7 @@
 .hamburger span {
   width: 25px;
   height: 2px;
-  background: #1A1A2E;
+  background: #1F2A24;
   transition: all 0.3s ease;
 }
 
@@ -120,13 +138,13 @@
     right: -100%;
     width: 70%;
     height: 100vh;
-    background: #FFFBEB;
+    background: #FFFDF7;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
     transition: right 0.4s ease;
-    border-left: 1px solid rgba(249, 115, 22, 0.2);
+    border-left: 1px solid rgba(176, 141, 87, 0.25);
     box-shadow: -10px 0 30px rgba(0,0,0,0.05);
   }
 
@@ -139,6 +157,10 @@
   }
 
   .nav-cta {
+    margin-top: 10px;
+  }
+
+  .theme-toggle {
     margin-top: 10px;
   }
 }

@@ -1,22 +1,19 @@
 .experience {
-  background: #FFFBEB;
+  background: #FAFBFC;
 }
 
-.experience-counter-wrapper {
-  margin-bottom: 30px;
-}
 .experience-card {
-  background: #FFF7ED;
+  background: #F1F3F5;
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-  border: 1px solid rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(249, 115, 22, 0.08);
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.08);
 }
 
 .experience-header {
@@ -27,39 +24,39 @@
   gap: 15px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .experience-header h3 {
   font-size: 1.4rem;
-  color: #1A1A2E;
+  color: #20242B;
   font-weight: 700;
 }
 
 .company {
   font-weight: 600;
-  color: #F97316;
+  color: #2563EB;
   margin-top: 5px;
 }
 
 .project {
-  color: #64748B;
+  color: #5B6472;
   font-size: 0.95rem;
   margin-top: 3px;
 }
 
 .date {
   padding: 6px 16px;
-  background: rgba(249, 115, 22, 0.1);
+  background: rgba(37, 99, 235, 0.1);
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #F97316;
+  color: #2563EB;
   white-space: nowrap;
 }
 
 .location {
-  color: #64748B;
+  color: #5B6472;
   font-size: 0.95rem;
   margin-bottom: 15px;
 }
@@ -70,7 +67,7 @@
 }
 
 .experience-details li {
-  color: #64748B;
+  color: #5B6472;
   padding: 8px 0;
   padding-left: 25px;
   position: relative;
@@ -81,7 +78,7 @@
   content: '▸';
   position: absolute;
   left: 0;
-  color: #F97316;
+  color: #2563EB;
   font-weight: bold;
 }
 

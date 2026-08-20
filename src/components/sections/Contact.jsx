@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaEnvelope, FaMobileAlt, FaMapMarkerAlt } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -8,6 +8,8 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -16,10 +18,34 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Thanks for reaching out! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
+
+    if (!endpoint) {
+      setStatus('Contact form is not configured yet. Please email me directly.')
+      return
+    }
+
+    setIsSubmitting(true)
+    setStatus('')
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) throw new Error('Form submission failed')
+
+      setStatus('Thanks for reaching out. I will get back to you soon.')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      setStatus('Something went wrong. Please email me directly instead.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -41,7 +67,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="contact-item">
-                <FaPhone className="contact-icon" />
+                <FaMobileAlt className="contact-icon" />
                 <div>
                   <strong>Phone</strong>
                   <p>+91 6302259874</p>
@@ -82,7 +108,10 @@ const Contact = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" className="btn-primary">Send Message</button>
+            <button type="submit" className="btn-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+            {status && <p className="form-status" role="status">{status}</p>}
           </form>
         </div>
       </div>
